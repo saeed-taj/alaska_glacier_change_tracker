@@ -1,0 +1,62 @@
+project: Alaska Glacier Change Tracker
+inventory:
+  name: Randolph Glacier Inventory
+  version: "7.0"
+  region: "01 - Alaska"
+  target_year: ~2000
+  source: https://nsidc.org/data/nsidc-0770/versions/7
+
+defaults:
+  season: ["07-20", "09-20"]
+  max_cloud: 30
+  n_best: 5
+  dem: "aw3d30"      # matches the research paper’s Alaska setup
+  use_l9: true
+
+glaciers:
+  gulkana:
+    name: Gulkana Glacier
+    rgi_id: RGI2000-v7.0-G-01-05299
+    glims_id: G214576E63274N
+    rgi_area_km2: 17.57
+    terminus_type_code: 9          # RGI7: 9 = Not assigned
+    terminus_type: not_assigned
+    note: "Main Gulkana. There is also a small West Gulkana (RGI...-05289) that we ignore for now."
+    bbox_buffer_km: 5
+    buffered_bbox_wgs84: [-145.600232, 63.205176, -145.245355, 63.346346]
+    reference_data:
+      rgi7_outline: true
+      usgs_benchmark: true          # long-term mass-balance site
+      historical_validation: pending
+    available_imagery_dates: []
+
+  wolverine:
+    name: Wolverine Glacier
+    rgi_id: RGI2000-v7.0-G-01-11350
+    glims_id: G211100E60420N
+    rgi_area_km2: 16.54
+    terminus_type_code: 9
+    terminus_type: not_assigned
+    bbox_buffer_km: 5
+    buffered_bbox_wgs84: [-149.043211, 60.327548, -148.767669, 60.478615]
+    reference_data:
+      rgi7_outline: true
+      usgs_benchmark: true
+      historical_validation: pending
+    available_imagery_dates: []
+
+  mendenhall:
+    name: Mendenhall Glacier
+    rgi_id: RGI2000-v7.0-G-01-19425
+    glims_id: G225469E58547N
+    rgi_area_km2: 109.36
+    terminus_type_code: 9
+    terminus_type: not_assigned
+    note: "Lake-terminating in recent decades. Expect higher segmentation error near the lake."
+    bbox_buffer_km: 5
+    buffered_bbox_wgs84: [-134.688174, 58.38959, -134.279604, 58.626322]
+    reference_data:
+      rgi7_outline: true
+      usgs_benchmark: false
+      historical_validation: pending
+    available_imagery_dates: []
