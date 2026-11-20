@@ -24,7 +24,7 @@ The project has two intended audiences:
 - **General users:** Explore glacier outlines and terrain across years, inspect how the mapped extent changes, and compare selected years through a future web interface.
 - **Researchers:** Inspect the geospatial outputs, source imagery, model provenance, processing parameters, reference-outline comparisons, quality indicators, and other metadata needed to evaluate and reuse the results.
 
-The initial implementation focuses on three configured Alaska glacier targets—Gulkana, Wolverine, and Mendenhall. The longer-term proposal is to extend the same configuration-driven workflow to additional glaciers rather than creating a separate processing implementation for every target.
+The initial implementation focuses on three configured Alaska glacier targets: Gulkana, Wolverine, and Mendenhall. The longer-term proposal is to extend the same configuration-driven workflow to additional glaciers rather than creating a separate processing implementation for every target.
 
 ## 2. Current glacier targets and configuration
 
@@ -309,7 +309,7 @@ The spatial comparison was approximately:
 - RGI area not predicted: 1.37 km².
 - IoU: approximately 0.78.
 
-In the years checked so far (2003, 2006, and 2013), the predicted area was roughly 10–18% above the RGI reference area.
+In the years checked so far (2003, 2006, and 2013), the predicted area was roughly 10 to 18% above the RGI reference area.
 
 These observations are preliminary sanity checks, not evidence of glacier growth or a validated temporal trend. The imagery years do not necessarily match the reference-outline date. Potential sources of discrepancy include seasonal snow near glacier margins, differences in outline delineation, the 100 m clipping buffer, and Landsat sensor transitions. A systematic year-to-year review is required before drawing conclusions about glacier change.
 
