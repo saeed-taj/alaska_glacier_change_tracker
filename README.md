@@ -6,6 +6,8 @@
 
 An automated, configuration-driven pipeline for generating, storing, inspecting, and comparing glacier outlines across historical satellite imagery in Alaska. The project combines Google Earth Engine imagery retrieval, GlaViTU inference, geospatial post-processing, reusable result packages, and an API for requesting and monitoring processing jobs.
 
+![Frontend](assets/image_03.png)
+
 **Contributor:** [@saeed-taj](https://github.com/saeed-taj)  
 **Initial configured glacier targets:** Gulkana, Wolverine, and Mendenhall  
 **Reference inventory:** Randolph Glacier Inventory (RGI) v7  
@@ -31,6 +33,10 @@ The initial implementation focuses on three configured Alaska glacier targets: G
 The application currently has three glacier targets configured in `config/glaciers.yaml`:
 
 - **Gulkana Glacier**
+
+![Frontend_gulkana](assets/image_04.png)
+
+
 - **Wolverine Glacier**
 - **Mendenhall Glacier**
 
@@ -144,6 +150,9 @@ curl -X GET \
   'http://127.0.0.1:8000/api/jobs/5e8a3f376a83' \
   -H 'accept: */*'
 ```
+
+## run backend using this cmd:
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
 During the test, the job progressed from `checking_cache` to `inferring`. The same endpoint can be called again to retrieve the latest job state.
 
